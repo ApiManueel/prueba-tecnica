@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.image-section {
+  background-image: url('https://i.imgur.com/rQFWJvT.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section {
+  min-height: 100vh;
+}

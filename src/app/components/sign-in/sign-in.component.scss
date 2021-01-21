@@ -1,0 +1,44 @@
+.content {
+  margin: 40px 25px;
+}
+
+mat-card {
+  width: fit-content;
+}
+
+mat-card-title{
+  margin-bottom: 3em;
+}
+
+mat-form-field {
+  width: 100%;
+  padding: 5px;
+}
+
+button {
+  border: none;
+}
+
+.options{  
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 18px;
+  input[type='checkbox'] {
+    margin-left: -20px;
+  }
+  a {
+    color: grey;
+  }
+}
+
+mat-card-actions {
+  padding: 0 5px;
+  a[href="#"] {
+    color: #17A2B8;
+  }
+  .btn {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
