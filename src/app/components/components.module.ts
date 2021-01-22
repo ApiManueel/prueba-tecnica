@@ -7,10 +7,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
+import { AsideComponent } from './aside/aside.component';
 
 @NgModule({
   declarations: [
-    SignInComponent
+    SignInComponent,
+    AsideComponent,
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import {MatInputModule} from '@angular/material/input';
     MatInputModule
   ],
   exports: [
-    SignInComponent
+    SignInComponent,
+    AsideComponent
   ]
 })
 export class ComponentsModule { }

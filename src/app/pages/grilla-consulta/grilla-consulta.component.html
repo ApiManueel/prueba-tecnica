@@ -1,0 +1,75 @@
+<div class="row">
+  <app-aside></app-aside>
+  
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <mat-accordion>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header matColumnDef="circle">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let element"><div class="circle" [ngStyle]="{'backgroundColor': setStyle(element.position)}"></div></td>
+        </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+          <td mat-cell *matCellDef="let element">{{element.id || '-'}}</td>
+        </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header matColumnDef="first-name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.first_name || '-'}} </td>
+        </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header matColumnDef="last-name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.last_name || '-'}} </td>
+        </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+      </mat-expansion-panel>
+      
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header matColumnDef="height-inches">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Height (in) </th>
+          <td mat-cell *matCellDef="let element"> {{element.height_inches || '-'}} </td>
+        </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header matColumnDef="height-feets">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Height (ft) </th>
+          <td mat-cell *matCellDef="let element"> {{element.height_feet || '-'}} </td>
+        </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header matColumnDef="weight-pounds">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Weight (pound) </th>
+          <td mat-cell *matCellDef="let element"> {{element.weight_pounds || '-'}} </td>
+        </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Position </th>
+          <td mat-cell *matCellDef="let element"><a href=""></a> {{element.position || '-'}} </td>
+        </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+      </mat-expansion-panel>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+    </mat-accordion>
+  </table>
+</div>
